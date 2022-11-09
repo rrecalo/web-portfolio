@@ -5,7 +5,7 @@ import {motion, } from 'framer-motion'
 import Projects from './Projects';
 import Nav from './Nav';
 import Bio from './Bio';
-import Skills from './Skills';
+import Experience from './Experience';
 
 const headerVariants ={
   outView:{
@@ -28,14 +28,14 @@ function App() {
       setSelected(newSelected);
   }
 
-  useEffect(()=>{console.log(selected)},[selected]);
+  //useEffect(()=>{console.log(selected)},[selected]);
 
   return (
     <div className="App w-100 bg-light d-flex flex-column col-12 justify-content-center">
       <div className='d-flex m-0 p-0 flex-column justify-content-center col-11 col-sm-9 col-md-9 col-lg-6 align-self-center'>
         <Header />
         <Nav setSelected={navigate} selected={selected}/>
-        {selected === "bio" ? <Bio /> : selected === "projects" ? <Projects /> : selected === "skills" ? <Skills /> : <></>}
+        {selected === "bio" ? <Bio /> : selected === "projects" ? <Projects /> : selected === "skills" ? <Experience /> : <></>}
 
       
       

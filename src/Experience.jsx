@@ -1,7 +1,7 @@
 import React from 'react'
 import {motion, } from 'framer-motion'
 
-const Skills = () => {
+const Experience = () => {
   return (
     <div className="d-flex flex-column col-12 justify-content-center" style={{marginTop:"100vh"}}>
     {/** header */}
@@ -12,4 +12,4 @@ const Skills = () => {
   )
 }
 
-export default Skills
+export default Experience

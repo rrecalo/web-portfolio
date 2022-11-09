@@ -3,10 +3,24 @@ import {motion, } from 'framer-motion'
 import AnimatedHeader from './AnimatedHeader';
 
 const bioText = [
-  { type: "heading3", text: "I'm Robert" },
+  { type: "heading3", text: "Hi, I'm Robert" },
 ];
 
 const container = {
+  hidden:{
+    x:"25%",
+  },
+  visible: {
+    x: "0",
+    transition: {
+      staggerChildren: 0.05,
+      when: "afterChildren",
+      duration:1,
+    }
+  }
+};
+
+const pContainer = {
   visible: {
     transition: {
       staggerChildren: 0.05,
@@ -14,16 +28,35 @@ const container = {
   }
 };
 
-const Bio = () => {
+const pVariants={
+  initial:{opacity:0},
+  visible:{opacity:1, transition:{duration:1, delay:2.25}}
+}
+
+
+
+const custom = {
+  hidden: {
+    opacity:0,
+    color: "#b1c5ad",
+    transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 }
+  },
+  visible: {
+    opacity:1,
+    color: "#b6ec8d",
+    transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75, }
+  }
+};
+
+const Bio = ({props}) => {
   return (
     <div id="biodiv" className="d-flex flex-column col-12 justify-content-center" style={{marginTop:"0vh"}}>
     {/** header */}
 
-      <div className='d-flex flex-column w-100 align-self-center text-left mt-5 fs-3 px-0 px-md-5 fw-light'>
+      <div className='d-flex flex-column col-11 align-self-center text-left mt-5 fs-3 fw-light'>
 
         <motion.div
           initial="hidden"
-          // animate="visible"
           animate="visible"
           variants={container}
           className='d-flex flex-column justify-content-center'>
@@ -31,18 +64,20 @@ const Bio = () => {
 
           <div className="container p-0">
          {bioText.map((item, index)=>{
-          return <AnimatedHeader {...item} key={index} animType={"opacity"} />;
+          return <AnimatedHeader {...item} key={index} animType={"custom"} customAnim={custom}/>;
           })}
         </div>
-        <motion.p initial={{opacity:0}}animate={{opacity:1, transition:{duration:1, delay:1.5}}}>
-        After discovering my passion for programming, I've been on a long road that has led me here.
-        </motion.p>
-        <motion.p initial={{opacity:0}}animate={{opacity:1, transition:{duration:1, delay:3.5}}}>
-        Beginning with an AP Computer Science class in Highschool, I started with Java.
-        </motion.p>
-        <motion.p initial={{opacity:0}}animate={{opacity:1, transition:{duration:1, delay:5.5}}}>
-        Many languages, years and side-projects later, I found interest in <span className='eht'>Web Development</span>
-        </motion.p>
+        </motion.div>
+        <motion.div initial="hidden" animate="visible" variants={pContainer}>
+            <motion.p initial="initial" animate="visible" variants={pVariants}>
+            After discovering my passion for programming, I've been on a long road that has led me here.
+            </motion.p>
+            <motion.p initial="initial" animate="visible" variants={pVariants}>
+            Beginning with an AP Computer Science class in Highschool, I started with Java.
+            </motion.p>
+            <motion.p initial="initial" animate="visible" variants={pVariants}>
+            Many languages, years and side-projects later, I found interest in <span className='eht'>Web Development</span>
+            </motion.p>
         </motion.div>
         
       </div>

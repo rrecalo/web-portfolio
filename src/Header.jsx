@@ -10,7 +10,7 @@ const nameText = [
 const container = {
   visible: {
     transition: {
-      staggerChildren: 0.025
+      staggerChildren: 0.1
     }
   }
 };

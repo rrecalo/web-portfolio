@@ -20,16 +20,16 @@ const tagMap = {
 // individual character animations
 const AnimatedHeader = (props) => {
   // Framer Motion variant object, for controlling animation
-  const item = {
+  const defaultAnim = {
     hidden: {
       y:"-100%",
       color: "#b1c5ad",
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85}
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85, delay:0.25}
     },
     visible: {
       y:0,
       color: "#b6ec8d",
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75 }
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75, delay:1.25 }
     }
   };
 
@@ -83,7 +83,7 @@ const AnimatedHeader = (props) => {
                 >
                   <motion.span
                     style={{ display: "inline-block" }}
-                    variants={props.animType === "opacity" ? item2 : item}
+                    variants={props.animType === "opacity" ? item2 : props.animType === "custom" ? props.customAnim : defaultAnim}
                   >
                     {element}
                   </motion.span>

@@ -14,6 +14,7 @@ span {
 html {
   background: #1c1c1c;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 p {
@@ -26,6 +27,26 @@ p {
 
 h1, .h1 {
   margin-bottom: 0 !important;
+}
+
+.projectcontainer {
+  overflow-x: hidden;
+}
+
+.card-link {
+  color: #b1c5ad;
+  text-decoration: none;
+}
+
+.projectview {
+  height: 80vh;
+}
+
+#projectsdiv {
+  max-height: 75vh;
+  padding-bottom: 5vh;
+  overflow-y: scroll !important;
+  overflow-x: hidden;
 }
 
 #name {
@@ -92,6 +113,29 @@ h1, .h1 {
     padding-top: 10vh !important;
   }
 }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1c1c1c !important;
+  border-radius: 25px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b6ec8d;
+  border-radius: 25px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f0f0f0;
+  border-radius: 25px;
+}
+
 /*!
  * Bootstrap  v5.2.2 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
