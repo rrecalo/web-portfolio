@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {AnimatePresence, motion, } from 'framer-motion'
 import Project from './Project'
 import ProjectView from './ProjectView'
+import ProjectData from './ProjectData'
 
 const projects=[
   {
@@ -46,7 +47,7 @@ const Projects = () => {
     animate="animate"
     variants={projectContainer}
       className="projectcontainer d-flex flex-column col-11 align-items-center gap-5 ">
-      {projects.map(project =>(<Project project={project} openProjectView={openProjectView}/>))}
+      {ProjectData.map(project =>(<Project project={project} openProjectView={openProjectView}/>))}
       </motion.div>
     </motion.div>
     :

@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div className="App w-100 bg-light d-flex flex-column col-12 justify-content-center">
-      <div className='d-flex m-0 p-0 flex-column justify-content-center col-11 col-sm-9 col-md-9 col-lg-6 align-self-center'>
+      <div className='d-flex m-0 p-0 flex-column justify-content-center col-11 col-sm-10 col-md-11 col-lg-6 align-self-center'>
         <Header />
         <Nav setSelected={navigate} selected={selected}/>
         {selected === "bio" ? <Bio /> : selected === "projects" ? <Projects /> : selected === "skills" ? <Experience /> : <></>}

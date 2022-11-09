@@ -29,17 +29,17 @@ export const infoButton ={
 const Project = ({project, openProjectView,...props}) => {
 
     function openProject(){
-        openProjectView(project.title);
+        openProjectView(project.info.title);
     }
 
   return (
-    <motion.div
+    <motion.div className='col-12'
     variants={projectCard}>
     <Card className='col-12 bg-light border-1 border-dark'>
         <Card.Body >
-            <Card.Title className='fs-2 text-dark'>{project.title}</Card.Title>
-            <Card.Subtitle className="card-subtitle mb-2 text-muted fs-6">{project.subtitle}</Card.Subtitle>
-            <p className="card-text fs-6">{project.desc}</p>
+            <Card.Title className='fs-2 text-dark'>{project.info.title}</Card.Title>
+            <Card.Subtitle className="card-subtitle mb-2 text-muted fs-6">{project.info.subtitle}</Card.Subtitle>
+            <p className="card-text fs-6">{project.info.desc}</p>
             <motion.button initial="initial" animate="animate" whileHover="whileHover" variants={infoButton} className="btn border-1 card-link fs-5"
             onClick={openProject}>More Info</motion.button>
         </Card.Body>
