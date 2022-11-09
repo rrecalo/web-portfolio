@@ -6,14 +6,24 @@
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10+ */
     user-select: none;
+    
+}
+span{
     overflow:hidden;
 }
 
 html{
     background: $light;
+    overflow-y:hidden;
 }
 p{
     color:$primary;
+}
+.word-wrapper {
+    white-space: nowrap !important;
+}
+h1{
+    margin-bottom: 0 !important;
 }
 
 #namediv{
