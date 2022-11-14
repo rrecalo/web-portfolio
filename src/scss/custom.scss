@@ -39,6 +39,16 @@ h1{
     height:80vh;
 }
 
+#projectviewdiv{
+    max-height:70%;
+    overflow-y: scroll !important;
+}
+#projectviewcard{
+    overflow-y:hidden !important;
+    min-height:90vh;
+    max-height: fit-content;
+}
+
 #projectsdiv{
     max-height: 75vh;
     padding-bottom: 5vh;

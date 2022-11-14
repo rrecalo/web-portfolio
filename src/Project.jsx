@@ -36,12 +36,17 @@ const Project = ({project, openProjectView,...props}) => {
     <motion.div className='col-12'
     variants={projectCard}>
     <Card className='col-12 bg-light border-1 border-dark'>
-        <Card.Body >
+        <Card.Body>
             <Card.Title className='fs-2 text-dark'>{project.info.title}</Card.Title>
             <Card.Subtitle className="card-subtitle mb-2 text-muted fs-6">{project.info.subtitle}</Card.Subtitle>
             <p className="card-text fs-6">{project.info.desc}</p>
+            <div className='d-flex flex-row col-12 justify-content-between'>
             <motion.button initial="initial" animate="animate" whileHover="whileHover" variants={infoButton} className="btn border-1 card-link fs-5"
             onClick={openProject}>More Info</motion.button>
+            <div className='d-flex flex-row gap-3 align-items-center'>
+                {project.techs.map((skill)=>(<p className='m-auto align-self-center fs-6 rht'>{skill}</p>))}
+            </div>
+            </div>
         </Card.Body>
     </Card>
     </motion.div>

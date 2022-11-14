@@ -1,5 +1,5 @@
-import React from 'react'
-import {motion, } from 'framer-motion'
+import React, { useEffect } from 'react'
+import {motion, useAnimationControls, } from 'framer-motion'
 import AnimatedHeader from './AnimatedHeader';
 
 const bioText = [
@@ -48,7 +48,17 @@ const custom = {
   }
 };
 
-const Bio = ({props}) => {
+const Bio = ({loaded, ...props}) => {
+
+  const animControls = useAnimationControls();
+
+  useEffect(()=>{
+    if(loaded){
+      animControls.stop();
+    }
+    console.log(loaded);
+  },[])
+
   return (
     <div id="biodiv" className="d-flex flex-column col-12 justify-content-center" style={{marginTop:"0vh"}}>
     {/** header */}

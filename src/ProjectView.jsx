@@ -2,6 +2,7 @@ import React from 'react'
 import ProjectData from './ProjectData'
 import { motion } from 'framer-motion';
 import { infoButton } from './Project';
+import vphome from './images/vphome.png';
 
 const projectViewVariant ={
     initial:{
@@ -22,26 +23,26 @@ const ProjectView = ({projectName, closeView}) => {
     const data = ProjectData.find(project => project.info.title === projectName);
 
   return (
-    <motion.div className="d-flex flex-column col-12 align-items-center gap-5 mt-5" initial="initial" animate="animate" exit="exit"
+    <motion.div  className="d-flex flex-column col-12 align-items-center gap-5 mt-5" initial="initial" animate="animate" exit="exit"
     variants={projectViewVariant}>
     {/**Info goes under this main div */}
-    <div className='d-flex flex-column col-11 border border-dark projectview align-items-start rounded'> 
+    <div id="projectviewcard" className='d-flex flex-column col-11 border border-dark projectview align-items-start rounded'> 
         <div className='d-flex flex-row col-12 align-items-center ps-3 pt-2'>
-            <div className='fs-2 text-primary col-5'>
+            <div className='fs-2 text-primary col-7'>
                 {data.info.title}
             </div>
-            <div className='d-flex flex-row col-7 align-items-center justify-content-center gap-4 pe-2'>
+            <div className='d-flex flex-row col-5 align-items-center justify-content-end gap-4 pe-3'>
                 <motion.a initial="initial" animate="animate" whileHover="whileHover" variants={infoButton} 
                     className="btn border-1 card-link fs-6 px-3"
                     href={data.gitLink} target="_blank">GitHub
                 </motion.a>
-                <motion.a initial="initial" animate="animate" whileHover="whileHover" variants={infoButton} 
+                {/* <motion.a initial="initial" animate="animate" whileHover="whileHover" variants={infoButton} 
                     className="btn border-1 card-link fs-6 px-3" style={data.deployLink == "" ? {pointerEvents: "none"} : ""}
                     href={data.deployLink} target="_blank">{data.deployLink == "" ? 'Not Deployed' : 'Deployment'}
-                </motion.a>
+                </motion.a> */}
                 <motion.button initial="initial" animate="animate" whileHover="whileHover" variants={infoButton} 
                     className="btn border-1 card-link fs-6 px-3"
-                    onClick={closeView}>Return
+                    onClick={closeView}>Close
                 </motion.button>
                
             </div>
@@ -50,14 +51,24 @@ const ProjectView = ({projectName, closeView}) => {
             <div className='fs-6 text-muted col-8'>
             {data.info.subtitle}
             </div>
-
         </div>
-        <div className='d-flex flex-row col-12 align-items-center ps-3 mt-4'>
-            <div className='fs-4 text-primary col-12'>
-            {data.summary.text}
+        <div className='d-flex flex-row col-12 px-3 mt-1'>
+            <div className='fs-6 text-primary col-8'>
+                {data.summary.text}
+            </div>        
+            <div className='d-flex flex-column flex-lg-row col-4 align-items-start justify-content-center gap-2 px-3 mt-2 text-dark fs-5'>
+            {data.techs.map((tech) => (<span className=''>{tech}</span>))}
             </div>
         </div>
-
+        <div id="projectviewdiv"  className='d-flex flex-column col-12 align-items-start ps-3 pe-3 mt-1'>
+            
+            <div  className='d-flex flex-column align-items-center gap-3 text-primary mt-4 px-2'>
+            <img src={require('./images/vphome.png')} alt='project home page' className='col-8 rounded' />
+            <img src={require('./images/vpcreate.png')} alt='project home page' className='col-8 rounded' />
+            
+            </div>
+        </div>
+       
     </div>
     </motion.div>
   )
