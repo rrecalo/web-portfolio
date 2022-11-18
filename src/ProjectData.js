@@ -12,7 +12,7 @@ const ProjectData = [
         gitLink:"https://github.com/GGC-SD/VisualPortofolioApp",
         deployLink:"",
         techs:["React", "Tailwind CSS", "Cloud Firestore"],
-        
+        images:["vphome.png", "vpcreate.png"],
     },
 
     {
@@ -22,11 +22,12 @@ const ProjectData = [
             desc: "Responsive, full-Stack, single-page-app built for the client's dog-breeding business."
         },
         summary:{
-            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non ex id urna faucibus egestas. Etiam rutrum purus a sollicitudin mattis. In hac habitasse platea dictumst.",
+            text:"A marketing/informative website built for a backyard dog-breeding business. The web-app has a form for users to submit their inquiries about future and current litters, which are stored for the owner to view on the admin portal in a simple table.",
         }   ,
         gitLink:"https://github.com/rrecalo/sieger-breeding",
         deployLink:"https://siegerbreeding.netlify.app",
         techs:["MERN Stack", "React-Bootstrap"],
+        images:["siegerhome.png", "siegeradmin.png"],
       },
       
 

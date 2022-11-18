@@ -83,7 +83,7 @@ const Bio = ({loaded, ...props}) => {
             After discovering my passion for programming, I've been on a long road that has led me here.
             </motion.p>
             <motion.p initial="initial" animate="visible" variants={pVariants}>
-            Beginning with an AP Computer Science class in Highschool, I started with Java.
+            Beginning with an AP Computer Science class in high school, I started with Java.
             </motion.p>
             <motion.p initial="initial" animate="visible" variants={pVariants}>
             Many languages, years and side-projects later, I found interest in <span className='eht'>Web Development</span>

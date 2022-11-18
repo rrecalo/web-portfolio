@@ -23,7 +23,7 @@ const ProjectView = ({projectName, closeView}) => {
     const data = ProjectData.find(project => project.info.title === projectName);
 
   return (
-    <motion.div  className="d-flex flex-column col-12 align-items-center gap-5 mt-5" initial="initial" animate="animate" exit="exit"
+    <motion.div  className="d-flex flex-column col-12 align-items-center gap-5 mt-2" initial="initial" animate="animate" exit="exit"
     variants={projectViewVariant}>
     {/**Info goes under this main div */}
     <div id="projectviewcard" className='d-flex flex-column col-11 border border-dark projectview align-items-start rounded'> 
@@ -56,15 +56,16 @@ const ProjectView = ({projectName, closeView}) => {
             <div className='fs-6 text-primary col-8'>
                 {data.summary.text}
             </div>        
-            <div className='d-flex flex-column flex-lg-row col-4 align-items-start justify-content-center gap-2 px-3 mt-2 text-dark fs-5'>
+            <div className='d-flex flex-column flex-column col-6 align-items-start justify-content-center gap-2 px-3 mt-2 text-dark fs-6'>
             {data.techs.map((tech) => (<span className=''>{tech}</span>))}
             </div>
         </div>
         <div id="projectviewdiv"  className='d-flex flex-column col-12 align-items-start ps-3 pe-3 mt-1'>
             
             <div  className='d-flex flex-column align-items-center gap-3 text-primary mt-4 px-2'>
-            <img src={require('./images/vphome.png')} alt='project home page' className='col-8 rounded' />
-            <img src={require('./images/vpcreate.png')} alt='project home page' className='col-8 rounded' />
+            {data.images.map(img =>(
+                <img src={require('./images/'+img)} alt='project_image' className='col-8 rounded' />
+            ))}
             
             </div>
         </div>
