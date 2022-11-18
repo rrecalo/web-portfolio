@@ -3,11 +3,16 @@ import {motion, } from 'framer-motion'
 
 const Skills = () => {
   return (
-    <div className="d-flex flex-column col-12 justify-content-center" style={{marginTop:"100vh"}}>
+    <div className="d-flex flex-column col-12 align-items-center justify-content-center" style={{}}>
     {/** header */}
-    <motion.h1 className=' blockheader align-self-center'>
-      skills
-    </motion.h1>
+    <div className='d-flex flex-row col-11 justify-content-between mt-3'>
+      <div className='text-primary text-center col-6 fs-1'>
+        Web Dev
+      </div>
+      <div className='text-primary text-center col-6 fs-1'>
+        General
+      </div>
+    </div>
   </div>
   )
 }
