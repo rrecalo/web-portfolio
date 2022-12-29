@@ -31,11 +31,12 @@ const ProjectView = ({projectName, closeView}) => {
             <div className='fs-2 text-primary col-7'>
                 {data.info.title}
             </div>
-            <div className='d-flex flex-row col-5 align-items-center justify-content-end gap-4 pe-3'>
-                <motion.a initial="initial" animate="animate" whileHover="whileHover" variants={infoButton} 
+            
+            <div className='d-flex flex-row col-5 align-items-center justify-content-end gap-4 pe-3 '>
+                {/* <motion.a initial="initial" animate="animate" whileHover="whileHover" variants={infoButton} 
                     className="btn border-1 card-link fs-6 px-3"
                     href={data.gitLink} target="_blank">GitHub
-                </motion.a>
+                </motion.a> */}
                 {/* <motion.a initial="initial" animate="animate" whileHover="whileHover" variants={infoButton} 
                     className="btn border-1 card-link fs-6 px-3" style={data.deployLink == "" ? {pointerEvents: "none"} : ""}
                     href={data.deployLink} target="_blank">{data.deployLink == "" ? 'Not Deployed' : 'Deployment'}
@@ -47,16 +48,16 @@ const ProjectView = ({projectName, closeView}) => {
                
             </div>
         </div>
-        <div className='d-flex flex-row col-12 align-items-center ps-3 mt-0'>
+        <div  className='d-flex flex-row col-12 align-items-center ps-3 mt-0'>
             <div className='fs-6 text-muted col-8'>
             {data.info.subtitle}
             </div>
         </div>
-        <div className='d-flex flex-row col-12 px-3 mt-1'>
+        <div id="textdesc" className='d-flex flex-row col-11 px-3 mt-1 align-self-center'>
             <div className='fs-6 text-primary col-8'>
                 {data.summary.text}
             </div>        
-            <div className='d-flex flex-column flex-column col-6 align-items-start justify-content-center gap-2 px-3 mt-2 text-dark fs-6'>
+            <div className='d-flex flex-column col-6 align-items-start justify-content-center gap-2 px-3 mt-2 text-dark fs-6'>
             {data.techs.map((tech) => (<span className=''>{tech}</span>))}
             </div>
         </div>

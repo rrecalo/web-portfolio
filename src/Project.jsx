@@ -40,7 +40,7 @@ const Project = ({project, openProjectView,...props}) => {
             <Card.Title className='fs-2 text-dark'>{project.info.title}</Card.Title>
             <Card.Subtitle className="card-subtitle mb-2 text-muted fs-6">{project.info.subtitle}</Card.Subtitle>
             <p className="card-text fs-6">{project.info.desc}</p>
-            <div className='d-flex flex-row col-12 justify-content-between'>
+            <div className='d-flex flex-row col-12 justify-content-between gap-2'>
             <motion.button initial="initial" animate="animate" whileHover="whileHover" variants={infoButton} className="btn border-1 card-link fs-5"
             onClick={openProject}>More Info</motion.button>
             <div className='d-flex flex-row gap-3 align-items-center'>
