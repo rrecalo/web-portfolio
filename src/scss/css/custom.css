@@ -8,13 +8,25 @@
 }
 
 span {
-  overflow: hidden;
+  overflow: hidden !important;
+}
+
+#root {
+  overflow: hidden !important;
 }
 
 html {
   background: #1c1c1c;
   overflow-y: hidden;
   overflow-x: hidden;
+}
+
+.App {
+  overflow: hidden !important;
+}
+
+body {
+  overflow: hidden !important;
 }
 
 p {
@@ -40,6 +52,10 @@ h1, .h1 {
 
 .projectview {
   height: 80vh;
+}
+
+#projectview {
+  overflow: hidden !important;
 }
 
 #projectviewdiv {
@@ -125,6 +141,9 @@ h1, .h1 {
   }
   #projectsdiv {
     padding-top: 10vh !important;
+  }
+  #textdesc {
+    font-size: 0.75em !important;
   }
 }
 /* width */

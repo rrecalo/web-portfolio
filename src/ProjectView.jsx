@@ -53,11 +53,11 @@ const ProjectView = ({projectName, closeView}) => {
             {data.info.subtitle}
             </div>
         </div>
-        <div id="textdesc" className='d-flex flex-row col-11 px-3 mt-1 align-self-center'>
-            <div className='fs-6 text-primary col-8'>
+        <div className='d-flex flex-row col-11 px-md-3 px-sm-2 px-0 mt-1 align-self-center'>
+            <div id="textdesc" className='fs-6 text-primary col-8'>
                 {data.summary.text}
             </div>        
-            <div className='d-flex flex-column col-6 align-items-start justify-content-center gap-2 px-3 mt-2 text-dark fs-6'>
+            <div id="textdesc" className='d-flex flex-column col-6 align-items-start justify-content-center gap-2 px-2  mt-2 text-dark fs-6'>
             {data.techs.map((tech) => (<span className=''>{tech}</span>))}
             </div>
         </div>
