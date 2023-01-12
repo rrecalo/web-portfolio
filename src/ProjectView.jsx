@@ -23,7 +23,7 @@ const ProjectView = ({projectName, closeView}) => {
     const data = ProjectData.find(project => project.info.title === projectName);
 
   return (
-    <motion.div  className="d-flex flex-column col-12 align-items-center gap-5 mt-2" initial="initial" animate="animate" exit="exit"
+    <motion.div id="projectview" className="d-flex flex-column col-12 align-items-center gap-5 mt-2" initial="initial" animate="animate" exit="exit"
     variants={projectViewVariant}>
     {/**Info goes under this main div */}
     <div id="projectviewcard" className='d-flex flex-column col-11 border border-dark projectview align-items-start rounded'> 

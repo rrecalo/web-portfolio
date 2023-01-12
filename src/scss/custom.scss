@@ -9,13 +9,24 @@
     
 }
 span{
-    overflow:hidden;
+    overflow:hidden !important;
+}
+#root{
+    overflow:hidden !important;
 }
 
 html{
     background: $light;
     overflow-y:hidden;
     overflow-x:hidden;
+}
+
+.App{
+    overflow:hidden !important;
+}
+
+body{
+    overflow:hidden !important;
 }
 p{
     color:$primary;
@@ -37,6 +48,10 @@ h1{
 
 .projectview{
     height:80vh;
+}
+
+#projectview{
+    overflow:hidden !important;
 }
 
 #projectviewdiv{
