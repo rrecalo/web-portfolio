@@ -61,11 +61,11 @@ const ProjectView = ({projectName, closeView}) => {
             {data.techs.map((tech) => (<span className=''>{tech}</span>))}
             </div>
         </div>
-        <div id="projectviewdiv"  className='d-flex flex-column col-12 align-items-start ps-3 pe-3 mt-1'>
+        <div id="projectviewdiv"  className='d-flex flex-column col-12 align-items-start px-2 mt-1'>
             
-            <div  className='d-flex flex-column align-items-center gap-3 text-primary mt-4 px-2'>
+            <div id="projectimagesdiv" className='d-flex flex-column align-items-center gap-3 text-primary mt-4'>
             {data.images.map(img =>(
-                <img src={require('./images/'+img)} alt='project_image' className='col-8 rounded' />
+                <img src={require('./images/'+img)} alt='project_image' className='col-10 rounded' />
             ))}
             
             </div>

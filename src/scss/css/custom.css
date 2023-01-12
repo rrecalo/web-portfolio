@@ -146,6 +146,10 @@ h1, .h1 {
     font-size: 0.75em !important;
   }
 }
+#projectimagesdiv {
+  padding-bottom: 20vh !important;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
