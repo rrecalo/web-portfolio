@@ -66,6 +66,7 @@ h1, .h1 {
 
 #projectviewcard {
   overflow-y: hidden !important;
+  overflow-x: hidden !important;
   min-height: 90vh;
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
