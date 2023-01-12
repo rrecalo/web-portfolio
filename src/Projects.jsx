@@ -42,7 +42,7 @@ const Projects = () => {
     <AnimatePresence mode="wait">
     {!expanded ?
 
-    <motion.div key="projects" id="projectsdiv" className="d-flex flex-column col-12 align-items-center gap-5 mt-5" style={{}} exit={{opacity:0}}>
+    <motion.div key="projects" id="projectsdiv" className="d-flex flex-column col-12 align-items-center gap-5 mt-3 mt-md-5" style={{}} exit={{opacity:0}}>
       <motion.div  initial="initial"
     animate="animate"
     variants={projectContainer}

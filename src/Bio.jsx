@@ -60,10 +60,10 @@ const Bio = ({loaded, ...props}) => {
   },[])
 
   return (
-    <div id="biodiv" className="d-flex flex-column col-12 justify-content-center" style={{marginTop:"0vh"}}>
+    <div id="biodiv" className="d-flex flex-column col-12 justify-content-center mt-3 mt-md-5" style={{marginTop:"0vh"}}>
     {/** header */}
 
-      <div className='d-flex flex-column col-11 align-self-center text-left mt-5 fs-3 fw-light'>
+      <div className='d-flex flex-column col-11 align-self-center text-left fs-3 fw-light'>
 
         <motion.div
           initial="hidden"
