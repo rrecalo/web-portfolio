@@ -27,12 +27,12 @@ const ProjectView = ({projectName, closeView}) => {
     variants={projectViewVariant}>
     {/**Info goes under this main div */}
     <div id="projectviewcard" className='d-flex flex-column col-11 border border-dark projectview align-items-start rounded'> 
-        <div className='d-flex flex-row col-12 align-items-center ps-3 pt-2'>
-            <div className='fs-2 text-primary col-7'>
+        <div className='d-flex flex-row col-12 align-items-center ps-3 pt-2 mb-md-1 mb-2'>
+            <div className='fs-md-2 fs-sm-3 fs-5 text-primary col-7'>
                 {data.info.title}
             </div>
             
-            <div className='d-flex flex-row col-5 align-items-center justify-content-end gap-4 pe-3 '>
+            <div className='d-flex flex-row col-5 align-items-center  justify-content-end gap-4 pe-3 '>
                 {/* <motion.a initial="initial" animate="animate" whileHover="whileHover" variants={infoButton} 
                     className="btn border-1 card-link fs-6 px-3"
                     href={data.gitLink} target="_blank">GitHub
@@ -49,15 +49,15 @@ const ProjectView = ({projectName, closeView}) => {
             </div>
         </div>
         <div  className='d-flex flex-row col-12 align-items-center ps-3 mt-0'>
-            <div className='fs-6 text-muted col-8'>
+            <div className='fs-md-6 fs-8 text-muted col-12'>
             {data.info.subtitle}
             </div>
         </div>
-        <div className='d-flex flex-row col-11 px-md-3 px-sm-2 px-0 mt-1 align-self-center'>
+        <div className='d-flex flex-row col-12 px-md-3 px-sm-2 px-0 mt-1 align-self-center ps-3 ps-m-0'>
             <div id="textdesc" className='fs-6 text-primary col-8'>
                 {data.summary.text}
             </div>        
-            <div id="textdesc" className='d-flex flex-column col-6 align-items-start justify-content-center gap-2 px-2  mt-2 text-dark fs-6'>
+            <div id="textdesc" className='d-flex flex-column col-6 align-items-start justify-content-center gap-2 px-2  mt-2 text-dark fs-md-6 fs-8'>
             {data.techs.map((tech) => (<span className=''>{tech}</span>))}
             </div>
         </div>
