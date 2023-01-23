@@ -130,6 +130,14 @@ h1, .h1 {
   font-weight: 100;
 }
 
+.fs-7 {
+  font-size: 0.85rem;
+}
+
+.fs-8 {
+  font-size: 0.7rem;
+}
+
 @media only screen and (max-width: 420px) {
   .blockheader {
     font-size: 4em;

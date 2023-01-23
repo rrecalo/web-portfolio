@@ -7,22 +7,22 @@ const ProjectData = [
             desc: "Fully responsive website equipped with a content-delivery network powered by Hygraph's Headless CMS"
         },
         summary:{
-            text:"Straightforward marketing website showcasing business information and the goods and services provided.",
+            text:"Sleek marketing website showcasing business information and the goods and services provided.",
         }   ,
         moreInfo:{enabled:true},
         gitLink:{link:"https://github.com/rrecalo/if-home-impro", enabled: true},
         deployLink:{link : "https://ifhomeimpro.netlify.app", enabled : true},
-        techs:["MERN Stack", "TailwindCSS, GraphQL, CDN/CMS"],
+        techs:["MERN Stack", "TailwindCSS", "GraphQL"],
         images:["ifhomeimpro_home.png", "ifhomeimpro_gallery.png"],
         },
         {
             info:{
                 title: "stock-trading-game",
                 subtitle: "work-in-progress stock trading browser game",
-                desc: "A stock trading with visualized stock price simulation using React Redux and Highcharts"
+                desc: "A full-stack web game with visualized stock price simulation and generated candlestick chart"
             },
             summary:{
-                text:"A stock trading game with simulated stock prices and visualized candlestick charts",
+                text:"A stock trading game with simulated stock prices and charts using React Redux and Highcharts",
             }   ,
             moreInfo:{enabled:false},
             gitLink:{link:"https://github.com/rrecalo/stock-trading-game", enabled: true},
@@ -50,7 +50,7 @@ const ProjectData = [
         info:{
             title: "sieger-breeding",
             subtitle: "backyard dog-breeder business website",
-            desc: "Responsive, full-Stack, single-page-app built for the client's dog-breeding business."
+            desc: "Responsive, full-stack, single-page-app built for the client's dog-breeding business."
         },
         summary:{
             text:"A marketing/informative website built for a backyard dog-breeding business. Equipped with a web form that submits data that is then available in the admin portal.",
