@@ -79,14 +79,14 @@ const Bio = ({loaded, ...props}) => {
         </div>
         </motion.div>
         <motion.div initial="hidden" animate="visible" variants={pContainer}>
-            <motion.p initial="initial" animate="visible" variants={pVariants}>
-            After discovering my passion for programming, I've been on a long road that has led me here.
+            <motion.p className='fs-6 mb-0' initial="initial" animate="visible" variants={pVariants}>
+              Information Technology student at Georgia Gwinnett College
             </motion.p>
-            <motion.p initial="initial" animate="visible" variants={pVariants}>
-            Beginning with an AP Computer Science class in high school, I started with Java.
+            <motion.p className='fs-6 mb-4' initial="initial" animate="visible" variants={pVariants}>
+              Experienced in front-end web development using ReactJS
             </motion.p>
-            <motion.p initial="initial" animate="visible" variants={pVariants}>
-            Many languages, years and side-projects later, I found interest in <span className='eht'>Web Development</span>
+            <motion.p className='fs-2 mb-0' initial="initial" animate="visible" variants={pVariants}>
+              I love finding innovative ways to implement complex software to solve problems and build useful applications
             </motion.p>
         </motion.div>
         

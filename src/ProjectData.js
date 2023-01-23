@@ -2,15 +2,46 @@ const ProjectData = [
 
         {
         info:{
-            title: "visual-portfolio",
-            subtitle: "A visual portfolio-building app",
-            desc: "Create-React-App project built in the context of a Software Development course in University"
+            title: "if-home-impro",
+            subtitle: "home-improvement business/marketing website",
+            desc: "Fully responsive website equipped with a content-delivery network powered by Hygraph's Headless CMS"
         },
         summary:{
-            text:"Designed to streamline the portfolio-making process - VisualPortfolio makes uses of react-dnd, a react drag-and-drop library, to allow users to quickly and efficiently produce any type of document, including resumes, CVs, and anything else you can imagine.",
+            text:"Straightforward marketing website showcasing business information and the goods and services provided.",
+        }   ,
+        moreInfo:{enabled:true},
+        gitLink:{link:"https://github.com/rrecalo/if-home-impro", enabled: true},
+        deployLink:{link : "https://ifhomeimpro.netlify.app", enabled : true},
+        techs:["MERN Stack", "TailwindCSS, GraphQL, CDN/CMS"],
+        images:["ifhomeimpro_home.png", "ifhomeimpro_gallery.png"],
         },
-        gitLink:"https://github.com/GGC-SD/VisualPortofolioApp",
-        deployLink:"",
+        {
+            info:{
+                title: "stock-trading-game",
+                subtitle: "work-in-progress stock trading browser game",
+                desc: "A stock trading with visualized stock price simulation using React Redux and Highcharts"
+            },
+            summary:{
+                text:"A stock trading game with simulated stock prices and visualized candlestick charts",
+            }   ,
+            moreInfo:{enabled:false},
+            gitLink:{link:"https://github.com/rrecalo/stock-trading-game", enabled: true},
+            deployLink:{link: "https://stock-trading-game.netlify.app", enabled : true},
+            techs:["MERN Stack", "React Redux", "TailwindCSS"],
+            images:["siegerhome.png", "siegeradmin.png"],
+          },
+        {
+        info:{
+            title: "visual-portfolio",
+            subtitle: "visual portfolio-building app",
+            desc: "React app built in the context of a Software Development course in University"
+        },
+        summary:{
+            text:"Designed to streamline the portfolio-making process - VisualPortfolio makes allow users to quickly and efficiently produce any document they want.",
+        },
+        moreInfo:{enabled:true},
+        gitLink:{link:"https://github.com/GGC-SD/VisualPortofolioApp", enabled: false},
+        deployLink:{link:"https://visual-portfolio.onrender.com", enabled: true},
         techs:["React", "Tailwind CSS", "Cloud Firestore"],
         images:["vphome.png", "vpcreate.png"],
     },
@@ -18,14 +49,15 @@ const ProjectData = [
     {
         info:{
             title: "sieger-breeding",
-            subtitle: "A backyard dog-breeder business website",
+            subtitle: "backyard dog-breeder business website",
             desc: "Responsive, full-Stack, single-page-app built for the client's dog-breeding business."
         },
         summary:{
-            text:"A marketing/informative website built for a backyard dog-breeding business. The web-app has a form for users to submit their inquiries about future and current litters, which are stored for the owner to view on the admin portal in a simple table.",
+            text:"A marketing/informative website built for a backyard dog-breeding business. Equipped with a web form that submits data that is then available in the admin portal.",
         }   ,
-        gitLink:"https://github.com/rrecalo/sieger-breeding",
-        deployLink:"https://siegerbreeding.netlify.app",
+        moreInfo:{enabled:true},
+        gitLink:{link:"https://github.com/rrecalo/sieger-breeding", enabled: true},
+        deployLink:{link:"https://siegerbreeding.netlify.app", enabled: false},
         techs:["MERN Stack", "React-Bootstrap"],
         images:["siegerhome.png", "siegeradmin.png"],
       },

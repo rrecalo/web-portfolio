@@ -15,6 +15,10 @@ span {
   overflow: hidden !important;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 html {
   background: #1c1c1c;
   overflow-y: hidden;

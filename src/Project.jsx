@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 const projectCard = {
     initial:{
@@ -37,12 +38,15 @@ const Project = ({project, openProjectView,...props}) => {
     variants={projectCard}>
     <Card className='col-12 bg-light border-1 border-dark'>
         <Card.Body>
-            <Card.Title className='fs-2 text-dark'>{project.info.title}</Card.Title>
+            <div className='d-flex flex-row justify-content-start align-items-center'><Card.Title className='fs-2 text-dark'>{project.info.title}</Card.Title>
+            <a className={`ps-4 ${project.gitLink.enabled === false ? "text-muted": ""}`} href={project.gitLink.link} target="_blank" rel="noreferrer" style={project.gitLink.enabled === false ? {pointerEvents : "none"} : {}}>GitHub</a>
+            <a className={`ps-4 ${project.deployLink.enabled === false ? "text-muted": ""}`} href={project.deployLink.link} target="_blank"rel="noreferrer" style={project.deployLink.enabled === false ? {pointerEvents : "none"} : {}} >Deploy</a>
+            </div>
             <Card.Subtitle className="card-subtitle mb-2 text-muted fs-6">{project.info.subtitle}</Card.Subtitle>
             <p className="card-text fs-6">{project.info.desc}</p>
             <div className='d-flex flex-row col-12 justify-content-between gap-2'>
             <motion.button initial="initial" animate="animate" whileHover="whileHover" variants={infoButton} className="btn border-1 card-link fs-5"
-            onClick={openProject}>More Info</motion.button>
+            onClick={openProject} disabled={!project.moreInfo.enabled}>More Info</motion.button>
             <div className='d-flex flex-row gap-3 align-items-center'>
                 {project.techs.map((skill)=>(<p className='m-auto align-self-center fs-6 rht'>{skill}</p>))}
             </div>
