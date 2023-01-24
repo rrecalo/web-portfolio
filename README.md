@@ -1,4 +1,5 @@
 # My web portfolio #
-
-Built in React using React-Boostrap + SCSS
-Animations using framer-motion
+Production build live at  https://www.robertrecalo.com 
+* Built in React using Create-React-App
+* Styled using React-Bootstrap + SCSS
+* Animations using framer-motion
