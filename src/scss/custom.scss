@@ -1,0 +1,185 @@
+@import "./variables";
+
+
+*{
+    font-family: 'Roboto Slab', serif !important;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;
+    
+}
+span{
+    overflow:hidden !important;
+}
+#root{
+    overflow:hidden !important;
+}
+a{
+    text-decoration: none !important;
+}
+
+html{
+    background: $light;
+    overflow-y:hidden;
+    overflow-x:hidden;
+}
+
+.App{
+    overflow:hidden !important;
+}
+
+body{
+    overflow:hidden !important;
+}
+p{
+    color:$primary;
+}
+.word-wrapper {
+    white-space: nowrap !important;
+}
+h1{
+    margin-bottom: 0 !important;
+}
+
+.projectcontainer{
+    overflow-x:hidden;
+}
+.card-link{
+    color: $primary;
+    text-decoration: none;
+}
+
+.projectview{
+    height:80vh;
+}
+
+#projectview{
+    overflow:hidden !important;
+}
+
+#projectviewdiv{
+    max-height:70%;
+    overflow-y: scroll !important;
+    padding-bottom: 10vh;
+}
+
+
+#projectviewcard{
+    overflow-y:hidden !important;
+    overflow-x:hidden !important;
+    min-height:90vh;
+    max-height: fit-content;
+}
+
+#projectsdiv{
+    max-height: 75vh;
+    padding-bottom: 5vh;
+    overflow-y: scroll !important;
+    overflow-x: hidden;
+}
+
+#name{
+    //text-shadow: 3px 3px 1px black;
+    color: $secondary;
+    transition: color 200ms linear;
+    //transition: text-shadow 500ms linear, color 500ms linear;
+}
+
+#name:hover{
+    color: $secondary;
+    //text-shadow: 5px 5px 1px black;
+    //text-shadow: 5px 5px 10px $primary;
+}
+
+.blockheader{
+    //font-variant: small-caps;
+    color:$primary;
+    font-size: 7rem;
+    //text-shadow: 2px 2px 1px $dark;
+}
+
+.social_icon{
+    color:$primary;
+    box-shadow: 5px 5px 1px black;
+    transition: box-shadow 400ms ease-out 10ms, 
+}
+.social_icon:hover{
+    color:$secondary !important;
+    box-shadow: 7px 7px 3px $dark;
+}
+.social{
+    color:$primary;
+    transition: color 400ms ease-out 10ms;
+}
+.social:hover{
+    color:$secondary;
+}
+
+
+.eht{
+    font-variant: small-caps;
+    color: $dark;
+    font-weight: bold;
+    text-shadow: 2px 2px 1px black;
+}
+
+.rht{
+    color: $dark;
+    font-weight: 100;
+    //text-shadow: 2px 2px 1px $primary;
+}
+.fs-7{
+    font-size:0.85rem;
+}
+.fs-8{
+    font-size:0.70rem;
+}
+
+@media only screen and (max-width: 420px){
+    .blockheader{
+        font-size: 4em;
+    }
+    #devtag{
+        font-size:0.7em !important;
+    }
+    #studenttag{
+        font-size:0.5em !important;
+    }
+
+    #textdesc{
+        font-size: 0.75em !important;
+    }
+
+}
+
+#projectimagesdiv{
+    padding-bottom: 20vh !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $light !important;
+    border-radius: 25px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $dark;
+    border-radius: 25px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $secondary; 
+    border-radius: 25px;
+  }
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";

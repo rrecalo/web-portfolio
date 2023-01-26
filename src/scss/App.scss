@@ -1,0 +1,9 @@
+*{
+  overflow-x:hidden;
+  font-family: 'Roboto Slab', serif !important;
+  user-select: none;
+}
+
+$blue : rgb(255, 255, 0);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
