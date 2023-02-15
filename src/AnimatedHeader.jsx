@@ -66,7 +66,7 @@ const AnimatedHeader = (props) => {
   const Tag = tagMap[props.type];
 
   return (
-    <Tag >
+    <Tag className="mb-0">
       {words.map((word, index) => {
         return (
           // Wrap each word in the Wrapper component
