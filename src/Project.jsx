@@ -43,7 +43,8 @@ const Project = ({project, openProjectView,...props}) => {
                 <Card.Title className='fs-sm-2 fs-5 text-dark '>{project.info.title}</Card.Title>
                 </div>
                 <div className='d-flex flex-row justify-content-start align-items-start ps-md-4 pb-2 pb-md-0'>
-                    <a className={`${project.gitLink.enabled === false ? "text-muted": ""}`} href={project.gitLink.link} target="_blank" rel="noreferrer" style={project.gitLink.enabled === false ? {pointerEvents : "none"} : {}}>GitHub</a>
+                    <a className={`${project.gitLink.enabled === false ? "text-muted": ""}`} href={project.gitLink.link} target="_blank" rel="noreferrer" style={project.gitLink.enabled === false ? {pointerEvents : "none"} : {}}>
+                        {project.gitLink.enabled ? <>GitHub</> : <>Private</>}</a>
                     <a className={`ps-4 ${project.deployLink.enabled === false ? "text-muted": ""}`} href={project.deployLink.link} target="_blank"rel="noreferrer" style={project.deployLink.enabled === false ? {pointerEvents : "none"} : {}} >Deploy</a>
                 </div>
             </div>
@@ -51,7 +52,7 @@ const Project = ({project, openProjectView,...props}) => {
             <p className="card-text fs-md-6 fs-7">{project.info.desc}</p>
             <div className='d-flex flex-column-reverse flex-md-row col-12 justify-content-between gap-2'>
             <motion.button initial="initial" animate="animate" whileHover="whileHover" variants={infoButton} className="btn border-1 card-link fs-5"
-            onClick={openProject} disabled={!project.moreInfo.enabled}>More Info</motion.button>
+            onClick={openProject} disabled={!project.moreInfo.enabled}>{project.moreInfo.enabled ? <>More Info</> : <>Not quite ready</>}</motion.button>
             <div className='d-flex flex-row gap-3 align-items-center'>
                 {project.techs.map((skill)=>(<p className='m-auto align-self-center fs-md-6 fs-7 rht'>{skill}</p>))}
             </div>

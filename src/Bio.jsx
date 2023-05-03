@@ -79,16 +79,16 @@ const Bio = ({loaded, ...props}) => {
         </div>
         </motion.div>
         <motion.div initial="hidden" animate="visible" variants={pContainer}>
-            <motion.p className='fs-7 mb-0' initial="initial" animate="visible" variants={pVariants}>
+            <motion.p className='fs-6 mb-0' initial="initial" animate="visible" variants={pVariants}>
               Information Technology student at Georgia Gwinnett College
             </motion.p>
-            <motion.p className='fs-7 mb-4' initial="initial" animate="visible" variants={pVariants}>
+            <motion.p className='fs-6 mb-4' initial="initial" animate="visible" variants={pVariants}>
               Experienced in front-end web development using ReactJS
             </motion.p>
-            <motion.p className='fs-6 mb-0' initial="initial" animate="visible" variants={pVariants}>
-              I love finding innovative ways to implement complex software to solve problems and build useful applications
+            <motion.p className='fs-5 mb-0' initial="initial" animate="visible" variants={pVariants}>
+              I love finding innovative ways to implement software as solutions to complex problems
             </motion.p>
-            <motion.p className='fs-6 mb-0' initial="initial" animate="visible" variants={pVariants}>
+            <motion.p className='fs-5 mb-0' initial="initial" animate="visible" variants={pVariants}>
               contact me at robertrecalo@icloud.com
             </motion.p>
         </motion.div>

@@ -46,21 +46,21 @@ const ProjectData = [
         images:["vphome.png", "vpcreate.png"],
     },
 
-    {
-        info:{
-            title: "sieger-breeding",
-            subtitle: "backyard dog-breeder business website",
-            desc: "Responsive, full-stack, single-page-app built for the client's dog-breeding business."
-        },
-        summary:{
-            text:"A marketing/informative website built for a backyard dog-breeding business. Equipped with a web form that submits data that is then available in the admin portal.",
-        }   ,
-        moreInfo:{enabled:true},
-        gitLink:{link:"https://github.com/rrecalo/sieger-breeding", enabled: true},
-        deployLink:{link:"https://siegerbreeding.netlify.app", enabled: false},
-        techs:["MERN Stack", "React-Bootstrap"],
-        images:["siegerhome.png", "siegeradmin.png"],
-      },
+    // {
+    //     info:{
+    //         title: "sieger-breeding",
+    //         subtitle: "backyard dog-breeder business website",
+    //         desc: "Responsive, full-stack, single-page-app built for the client's dog-breeding business."
+    //     },
+    //     summary:{
+    //         text:"A marketing/informative website built for a backyard dog-breeding business. Equipped with a web form that submits data that is then available in the admin portal.",
+    //     }   ,
+    //     moreInfo:{enabled:true},
+    //     gitLink:{link:"https://github.com/rrecalo/sieger-breeding", enabled: true},
+    //     deployLink:{link:"https://siegerbreeding.netlify.app", enabled: false},
+    //     techs:["MERN Stack", "React-Bootstrap"],
+    //     images:["siegerhome.png", "siegeradmin.png"],
+    //   },
       
 
 ]
