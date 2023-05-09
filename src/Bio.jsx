@@ -74,6 +74,10 @@ const Bio = ({loaded, ...props}) => {
     console.log(loaded);
   },[])
 
+  useEffect(()=>{
+    setImages(ProjectData.find(p => p.info.title === projectToView.info.title).images);
+  }, [projectToView])
+
   return (
     <div id="biodiv" className="d-flex flex-column col-12 justify-content-center mt-3 mt-md-5" style={{marginTop:"0vh"}}>
     {/** header */}

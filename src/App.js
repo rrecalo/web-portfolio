@@ -1,11 +1,7 @@
-import react, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
 import  "./scss/css/custom.css";
 import Header from './Header';
-import {motion, } from 'framer-motion'
-import Projects from './Projects';
-import Nav from './Nav';
 import Bio from './Bio';
-import Skills from './Skills';
 
 const headerVariants ={
   outView:{

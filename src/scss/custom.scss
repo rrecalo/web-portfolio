@@ -24,16 +24,8 @@ h3{
 html{
     background: $light;
     overflow-x:hidden;
-    //overflow-y:hidden !important;
 }
 
-.App{
-    //overflow-y:hidden !important;
-}
-
-body{
-    //overflow-y:hidden !important;
-}
 p{
     color:$primary;
 }
@@ -52,65 +44,31 @@ h1{
     height:150px;
 }
 
-.projectview{
-    height:80vh;
-}
-
-.project-carousel-container{
-    width:100%;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow:hidden;
-    height:auto;
-}
-.carousel-button{
-    background-color: transparent;
-    border:none;
-    transition: 0.75s,
-}
-.carousel-button:hover{
-    background-color: $primary;
-    border:none;
-    transition: 0.1s,
-}
-
-.project-carousel-item{
-    aspect-ratio: 16 / 9 !important;
-    width:100%;
-    height:auto;
-    display:flex !important;
-    align-items:center;
-    justify-content: center;
-    transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
-}
-
 .carousel-img-container{
     width:100%;
+}
 
+.swiper{
+    width:100%;
+}
+
+.swiper-slide { 
+    width:100%;
+    }
+
+.slide_div{
+    aspect-ratio: 16 / 9;
+    width:100%;
+    height:auto;
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #project_desc{
     height:75px;
 }
 
-#projectview{
-    overflow: scroll !important;
-}
-
-
-#projectviewdiv{
-    max-height:70%;
-    overflow-y: scroll !important;
-    padding-bottom: 10vh;
-}
-
-
-#projectviewcard{
-    //overflow-y:hidden !important;
-    overflow-x:hidden !important;
-    min-height:90vh;
-    max-height: fit-content;
-}
 
 #name{
     //text-shadow: 3px 3px 1px black;
@@ -182,16 +140,11 @@ h1{
     #studenttag{
         font-size:0.5em !important;
     }
-
     #textdesc{
         font-size: 0.75em !important;
     }
-
 }
 
-#projectimagesdiv{
-    padding-bottom: 20vh !important;
-}
 
 /* width */
 ::-webkit-scrollbar {
