@@ -38,7 +38,7 @@ const Navbar = () => {
                   </div>
                   </motion.div>
                 <p id='devtag' className='d-flex flex-column flex-md-row text-dark fs-4 m-0 p-0 rht'>
-                  <span>Software, Web developer</span>
+                  <span>Software Engineer</span>
                   {/* <span id='studenttag' className='align-self-md-center fs-6'>&nbsp;&nbsp;Student at Georgia Gwinnett College</span> */}
                 </p>
             </div>

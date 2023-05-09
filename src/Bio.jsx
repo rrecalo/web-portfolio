@@ -97,10 +97,10 @@ const Bio = ({loaded, ...props}) => {
         </div>
 
         <motion.div initial="hidden" animate="visible" variants={pContainer} className='d-flex flex-column col-md-9 col-12 align-self-center text-left '>
-            <motion.p className='fs-7 mb-0' initial="initial" animate="visible" variants={pVariants}>
+            <motion.p className='fs-6 mb-0 text-secondary' initial="initial" animate="visible" variants={pVariants}>
               IT student at Georgia Gwinnett College
             </motion.p>
-            <motion.p className='fs-7 mb-4' initial="initial" animate="visible" variants={pVariants}>
+            <motion.p className='fs-6 mb-4 text-secondary' initial="initial" animate="visible" variants={pVariants}>
               Experienced in front-end web development
             </motion.p>
             {/* <motion.p className='fs-6 mb-0' initial="initial" animate="visible" variants={pVariants}>
