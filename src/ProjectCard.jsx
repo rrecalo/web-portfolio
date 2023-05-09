@@ -27,39 +27,40 @@ export const infoButton ={
     }
 }
 
-const Project = ({project, openProjectView,...props}) => {
+const ProjectCard = ({project, openProjectView,...props}) => {
 
     function openProject(){
         openProjectView(project.info.title);
     }
 
   return (
-    <motion.div className='col-12'
+    <motion.div id="project-card" className='col-lg-4 col-12'
     variants={projectCard}>
-    <Card className='col-12 bg-light border-1 border-dark'>
+    <Card className='col-12 bg-light border-1 border-dark h-100'>
         <Card.Body>
-            <div className='d-flex flex-md-row flex-column justify-content-start align-items-start align-items-md-center mb-0 mb-md-2'>
-                <div className='d-flex flex-row justify-content-center align-items-center'>
-                <Card.Title className='fs-sm-2 fs-5 text-dark '>{project.info.title}</Card.Title>
+            <div className='d-flex flex-column justify-content-between h-100 align-items-start'>
+                <div className='d-flex flex-column justify-content-between align-items-start'>
+                    <Card.Title className='fs-sm-2 fs-5 text-dark '>{project.info.title}</Card.Title>
+                    <Card.Subtitle className="card-subtitle mb-md-2 mb-0 text-muted fs-md-6 fs-8">{project.info.subtitle}</Card.Subtitle>
+                    
                 </div>
-                <div className='d-flex flex-row justify-content-start align-items-start ps-md-4 pb-2 pb-md-0'>
+                <div className='d-flex flex-row justify-content-between align-items-center pb-2 pb-md-0 fs-6 w-100'>
+                    <div className='d-flex justify-content-between align-items-center'>
                     <a className={`${project.gitLink.enabled === false ? "text-muted": ""}`} href={project.gitLink.link} target="_blank" rel="noreferrer" style={project.gitLink.enabled === false ? {pointerEvents : "none"} : {}}>GitHub</a>
                     <a className={`ps-4 ${project.deployLink.enabled === false ? "text-muted": ""}`} href={project.deployLink.link} target="_blank"rel="noreferrer" style={project.deployLink.enabled === false ? {pointerEvents : "none"} : {}} >Deploy</a>
+                    </div>
+                    <div className='d-flex justify-content-end col-6'>
+                    <motion.button initial="initial" animate="animate" whileHover="whileHover" variants={infoButton} className="btn border-1 card-link fs-6"
+                    onClick={openProject} disabled={!project.moreInfo.enabled}>More Info</motion.button>
+                    </div>
                 </div>
+                
             </div>
-            <Card.Subtitle className="card-subtitle mb-md-2 mb-0 text-muted fs-md-6 fs-8">{project.info.subtitle}</Card.Subtitle>
-            <p className="card-text fs-md-6 fs-7">{project.info.desc}</p>
-            <div className='d-flex flex-column-reverse flex-md-row col-12 justify-content-between gap-2'>
-            <motion.button initial="initial" animate="animate" whileHover="whileHover" variants={infoButton} className="btn border-1 card-link fs-5"
-            onClick={openProject} disabled={!project.moreInfo.enabled}>More Info</motion.button>
-            <div className='d-flex flex-row gap-3 align-items-center'>
-                {project.techs.map((skill)=>(<p className='m-auto align-self-center fs-md-6 fs-7 rht'>{skill}</p>))}
-            </div>
-            </div>
+            
         </Card.Body>
     </Card>
     </motion.div>
   )
 }
 
-export default Project
+export default ProjectCard

@@ -47,7 +47,13 @@ const Navbar = () => {
         {/*Social icons 
           whileHover={{boxShadow: "10px 10px 5px $primary", color:"black",}}
         */}
-            <div className='d-flex flex-row justify-content-end gap-3 align-self-center col-3'>
+          <div className='d-flex flex-row justify-content-end gap-3 align-self-center col-3'>
+          <motion.a className='rounded border-0 d-flex align-items-center' href={require("./images/resume_robertrecalo.pdf")} target='_blank' rel="noreferrer"
+          whileHover={{y:-3, scale:1.1}}>
+            <div >
+              resume
+            </div>
+          </motion.a>
           <motion.div className='rounded border-0 social_icon'
           whileHover={{y:-3, scale:1.1}}>
             <a href='https://github.com/rrecalo' target="_blank" rel="noreferrer">

@@ -1,6 +1,9 @@
-import React, { useEffect } from 'react'
-import {motion, useAnimationControls, } from 'framer-motion'
+import React, { useEffect, useState} from 'react'
+import {motion, useAnimationControls, AnimatePresence} from 'framer-motion'
 import AnimatedHeader from './AnimatedHeader';
+import ProjectData from './ProjectData'
+import ProjectCard from './ProjectCard'
+import ImageCarousel from './ImageCarousel';
 
 const bioText = [
   { type: "heading3", text: "Hi, I'm Robert" },
@@ -33,8 +36,6 @@ const pVariants={
   visible:{opacity:1, transition:{duration:1, delay:2.25}}
 }
 
-
-
 const custom = {
   hidden: {
     opacity:0,
@@ -50,6 +51,20 @@ const custom = {
 
 const Bio = ({loaded, ...props}) => {
 
+  const [expanded, isExpanded] = useState(false);
+  const [projectToView, setProjectToView] = useState(ProjectData.find(p => p.info.title === "ecommerce-app"));
+  const [images, setImages] = useState(ProjectData.find(p => p.info.title === "ecommerce-app").images);
+
+  function openProjectView(projectToOpen){
+      setImages(ProjectData.find(p => p.info.title === projectToOpen.info.title).images);
+      setProjectToView(projectToOpen);
+      isExpanded(true);
+  }
+  function closeProjectView(){
+      isExpanded(false);
+      setProjectToView({});
+  }
+
   const animControls = useAnimationControls();
 
   useEffect(()=>{
@@ -63,36 +78,60 @@ const Bio = ({loaded, ...props}) => {
     <div id="biodiv" className="d-flex flex-column col-12 justify-content-center mt-3 mt-md-5" style={{marginTop:"0vh"}}>
     {/** header */}
 
-      <div className='d-flex flex-column col-11 align-self-center text-left fs-3 fw-light'>
+      <div className='d-flex flex-column col-12 align-self-center text-left fs-3 fw-light'>
 
+        <div className='d-flex flex-column col-md-9 col-12 align-self-center text-left'>
         <motion.div
           initial="hidden"
           animate="visible"
           variants={container}
-          className='d-flex flex-column justify-content-center'>
+          className='d-flex flex-column justify-content-center col-6'>
 
 
           <div className="container p-0">
-         {bioText.map((item, index)=>{
-          return <AnimatedHeader {...item} key={index} animType={"custom"} customAnim={custom}/>;
-          })}
-        </div>
+          {bioText.map((item, index)=>{
+            return <AnimatedHeader {...item} key={index} animType={"custom"} customAnim={custom}/>;
+            })}
+          </div>
         </motion.div>
-        <motion.div initial="hidden" animate="visible" variants={pContainer}>
+        </div>
+
+        <motion.div initial="hidden" animate="visible" variants={pContainer} className='d-flex flex-column col-md-9 col-12 align-self-center text-left '>
             <motion.p className='fs-7 mb-0' initial="initial" animate="visible" variants={pVariants}>
-              Information Technology student at Georgia Gwinnett College
+              IT student at Georgia Gwinnett College
             </motion.p>
             <motion.p className='fs-7 mb-4' initial="initial" animate="visible" variants={pVariants}>
-              Experienced in front-end web development using ReactJS
+              Experienced in front-end web development
             </motion.p>
-            <motion.p className='fs-6 mb-0' initial="initial" animate="visible" variants={pVariants}>
+            {/* <motion.p className='fs-6 mb-0' initial="initial" animate="visible" variants={pVariants}>
               I love finding innovative ways to implement complex software to solve problems and build useful applications
-            </motion.p>
-            <motion.p className='fs-6 mb-0' initial="initial" animate="visible" variants={pVariants}>
+            </motion.p> */}
+            {/* <motion.p className='fs-6 mb-0' initial="initial" animate="visible" variants={pVariants}>
               contact me at robertrecalo@icloud.com
-            </motion.p>
+            </motion.p> */}
         </motion.div>
-        
+      
+      <motion.div key="projects" id="projectsdiv" className="d-flex flex-column col-12 align-items-center mt-md-5 mt-2" style={{}} exit={{opacity:0}}>
+        <motion.div  initial="initial"
+        animate="animate"
+        //variants={projectContainer}
+        className="projectcontainer d-flex flex-lg-row flex-column align-items-center justify-content-center gap-3">
+        {ProjectData.map(project =>(<ProjectCard key={project.info.title} project={project} openProjectView={() => openProjectView(project)}/>))}
+        </motion.div>
+      </motion.div>
+      
+      <div className='d-flex flex-column col-md-9 col-12 align-self-center text-left '>
+      <div className='col-12 mx-auto mt-5 text-primary'>
+      {projectToView.info.title}
+      </div>
+      <div id="project_desc" className='col-12 mx-auto mt-1 text-secondary fs-6'>
+        {projectToView.info.desc}
+      </div>
+
+      <div className='d-flex col-12 mx-auto mb-5 mt-3'>
+        <ImageCarousel imageList={images} />
+      </div>  
+      </div>
       </div>
     </div>
   )

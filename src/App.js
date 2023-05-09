@@ -35,9 +35,8 @@ function App() {
     <div className="App w-100 bg-light d-flex flex-column col-12 justify-content-center">
       <div className='d-flex m-0 p-0 flex-column justify-content-center col-11 col-sm-10 col-md-11 col-lg-10 col-xl-9 col-xxl-8 align-self-center'>
         <Header />
-        <Nav setSelected={navigate} selected={selected} setLoaded={setLoaded}/>
-        {selected === "bio" ? <Bio loaded={loaded}/> : selected === "projects" ? <Projects /> : selected === "skills" ? <Skills /> : <></>}
-
+        {/* <Nav setSelected={navigate} selected={selected} setLoaded={setLoaded}/> */}
+        <Bio/>
       
       
 

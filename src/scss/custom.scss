@@ -23,16 +23,16 @@ h3{
 
 html{
     background: $light;
-    overflow-y:hidden;
     overflow-x:hidden;
+    //overflow-y:hidden !important;
 }
 
 .App{
-    overflow:hidden !important;
+    //overflow-y:hidden !important;
 }
 
 body{
-    overflow:hidden !important;
+    //overflow-y:hidden !important;
 }
 p{
     color:$primary;
@@ -43,22 +43,60 @@ p{
 h1{
     margin-bottom: 0 !important;
 }
-
-.projectcontainer{
-    overflow-x:hidden;
-}
 .card-link{
     color: $primary;
     text-decoration: none;
+}
+
+#project-card{
+    height:150px;
 }
 
 .projectview{
     height:80vh;
 }
 
-#projectview{
-    overflow:hidden !important;
+.project-carousel-container{
+    width:100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow:hidden;
+    height:auto;
 }
+.carousel-button{
+    background-color: transparent;
+    border:none;
+    transition: 0.75s,
+}
+.carousel-button:hover{
+    background-color: $primary;
+    border:none;
+    transition: 0.1s,
+}
+
+.project-carousel-item{
+    aspect-ratio: 16 / 9 !important;
+    width:100%;
+    height:auto;
+    display:flex !important;
+    align-items:center;
+    justify-content: center;
+    transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.carousel-img-container{
+    width:100%;
+
+}
+
+#project_desc{
+    height:75px;
+}
+
+#projectview{
+    overflow: scroll !important;
+}
+
 
 #projectviewdiv{
     max-height:70%;
@@ -68,17 +106,10 @@ h1{
 
 
 #projectviewcard{
-    overflow-y:hidden !important;
+    //overflow-y:hidden !important;
     overflow-x:hidden !important;
     min-height:90vh;
     max-height: fit-content;
-}
-
-#projectsdiv{
-    max-height: 75vh;
-    padding-bottom: 5vh;
-    overflow-y: scroll !important;
-    overflow-x: hidden;
 }
 
 #name{
@@ -118,6 +149,9 @@ h1{
     color:$secondary;
 }
 
+.font-light{
+    font-weight: 200;
+}
 
 .eht{
     font-variant: small-caps;
@@ -181,6 +215,15 @@ h1{
     background: $secondary; 
     border-radius: 25px;
   }
+
+@media only screen and (max-width: 768px){
+    #project-card{
+        height:130px;
+    }
+    #project_desc{
+        height:100px;
+    }
+}
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/bootstrap/scss/functions";

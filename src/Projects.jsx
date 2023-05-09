@@ -1,21 +1,8 @@
 import React, {useState} from 'react'
 import {AnimatePresence, motion, } from 'framer-motion'
-import Project from './Project'
+import ProjectCard from './ProjectCard'
 import ProjectView from './ProjectView'
 import ProjectData from './ProjectData'
-
-const projects=[
-  {
-    title: "visual-portfolio",
-    subtitle: "A visual portfolio-building web-app",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mollis turpis mauris, eget efficitur velit blandit quis. Praesent non maximus risus."
-  },
-  {
-    title: "sieger-breeding",
-    subtitle: "A backyard dog-breeder business website",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mollis turpis mauris, eget efficitur velit blandit quis. Praesent non maximus risus."
-  },
-]
 
 const projectContainer = {
   initial:{x:"100%",},
@@ -42,12 +29,12 @@ const Projects = () => {
     <AnimatePresence mode="wait">
     {!expanded ?
 
-    <motion.div key="projects" id="projectsdiv" className="d-flex flex-column col-12 align-items-center gap-5 mt-3 mt-md-5" style={{}} exit={{opacity:0}}>
+    <motion.div key="projects" id="projectsdiv" className="d-flex flex-column col-12 align-items-center gap-5 mt-1" style={{}} exit={{opacity:0}}>
       <motion.div  initial="initial"
     animate="animate"
     variants={projectContainer}
       className="projectcontainer d-flex flex-column col-11 align-items-center gap-5 ">
-      {ProjectData.map(project =>(<Project project={project} openProjectView={openProjectView}/>))}
+      {ProjectData.map(project =>(<ProjectCard project={project} openProjectView={openProjectView}/>))}
       </motion.div>
     </motion.div>
     :
