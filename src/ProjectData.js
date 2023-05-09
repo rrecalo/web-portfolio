@@ -27,7 +27,7 @@ const ProjectData = [
             }   ,
             moreInfo:{enabled:true},
             gitLink:{link:"https://github.com/BenMoreira/crypto-betting-app", enabled: true},
-            deployLink:{link: "https://stock-trading-game.netlify.app", enabled : false},
+            deployLink:{link: "https://crypto-betting-app.netlify.app", enabled : true},
             techs:["MERN Stack", "React Redux", "TailwindCSS"],
             images:["crypto-betting_charts.png", "crypto-betting_dash.png", "crypto-betting_login.png"],
         },
