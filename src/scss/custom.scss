@@ -23,17 +23,9 @@ h3{
 
 html{
     background: $light;
-    overflow-y:hidden;
     overflow-x:hidden;
 }
 
-.App{
-    overflow:hidden !important;
-}
-
-body{
-    overflow:hidden !important;
-}
 p{
     color:$primary;
 }
@@ -43,43 +35,40 @@ p{
 h1{
     margin-bottom: 0 !important;
 }
-
-.projectcontainer{
-    overflow-x:hidden;
-}
 .card-link{
     color: $primary;
     text-decoration: none;
 }
 
-.projectview{
-    height:80vh;
+#project-card{
+    height:150px;
 }
 
-#projectview{
-    overflow:hidden !important;
+.carousel-img-container{
+    width:100%;
 }
 
-#projectviewdiv{
-    max-height:70%;
-    overflow-y: scroll !important;
-    padding-bottom: 10vh;
+.swiper{
+    width:100%;
 }
 
+.swiper-slide { 
+    width:100%;
+    }
 
-#projectviewcard{
-    overflow-y:hidden !important;
-    overflow-x:hidden !important;
-    min-height:90vh;
-    max-height: fit-content;
+.slide_div{
+    aspect-ratio: 16 / 9;
+    width:100%;
+    height:auto;
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-#projectsdiv{
-    max-height: 75vh;
-    padding-bottom: 5vh;
-    overflow-y: scroll !important;
-    overflow-x: hidden;
+#project_desc{
+    height:75px;
 }
+
 
 #name{
     //text-shadow: 3px 3px 1px black;
@@ -118,6 +107,9 @@ h1{
     color:$secondary;
 }
 
+.font-light{
+    font-weight: 200;
+}
 
 .eht{
     font-variant: small-caps;
@@ -148,16 +140,11 @@ h1{
     #studenttag{
         font-size:0.5em !important;
     }
-
     #textdesc{
         font-size: 0.75em !important;
     }
-
 }
 
-#projectimagesdiv{
-    padding-bottom: 20vh !important;
-}
 
 /* width */
 ::-webkit-scrollbar {
@@ -181,6 +168,15 @@ h1{
     background: $secondary; 
     border-radius: 25px;
   }
+
+@media only screen and (max-width: 768px){
+    #project-card{
+        height:130px;
+    }
+    #project_desc{
+        height:100px;
+    }
+}
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/bootstrap/scss/functions";
