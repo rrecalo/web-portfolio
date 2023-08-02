@@ -48,7 +48,7 @@ const Navbar = () => {
           whileHover={{boxShadow: "10px 10px 5px $primary", color:"black",}}
         */}
           <div className='d-flex flex-row justify-content-end gap-3 align-self-center col-3'>
-          <motion.a className='rounded border-0 d-flex align-items-center' href={require("./images/resume_robertrecalo.pdf")} target='_blank' rel="noreferrer"
+          <motion.a className='rounded border-0 d-flex align-items-center' href={require("./images/robertrecalo_resume.pdf")} target='_blank' rel="noreferrer"
           whileHover={{y:-3, scale:1.1}}>
             <div >
               resume
